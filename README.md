@@ -4,7 +4,7 @@ A simple PyCharm plugin that adds a toolbar toggle button to control the **Show 
 
 ## What It Does
 
-When working with matplotlib in PyCharm Professional, plots can either appear inline in the console or in a dedicated tool window. Switching between these modes normally requires navigating through Settings > Tools > Python Plots. This plugin adds a one-click toggle to the main toolbar and the Tools menu.
+When working with matplotlib in PyCharm Professional, plots can either appear inline in pop-up window or in a dedicated tool sidebar window. Switching between these modes normally requires navigating through Settings > Tools > Python Plots. This plugin adds a one-click toggle to the main toolbar and the Tools menu. The tool sidebar window has the advantage of easily viewing current and past plots, but only allows saving as .png, the popup window only allows viewing the current plot, but allows plots to be saved in other formats, such as PDFs. Thus it is convienient to switch between modes as you swicth between editing a plot and actually saving it.
 
 - **Button ON** (checked): Plots appear in the PyCharm Plots tool window.
 - **Button OFF** (unchecked): Plots appear inline in the Python console.
