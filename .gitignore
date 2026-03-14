@@ -1,0 +1,15 @@
+# Gradle
+.gradle/
+build/
+
+# IntelliJ Platform SDK downloads
+.intellijPlatform/
+
+# IDE project files
+.idea/
+*.iml
+out/
+
+# OS files
+.DS_Store
+Thumbs.db

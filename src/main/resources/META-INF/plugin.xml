@@ -1,0 +1,51 @@
+<idea-plugin>
+    <id>com.plottoggle.pycharm-plot-toggle</id>
+    <name>Plot Toggle</name>
+    <vendor email="feedback@rootmllab.com" url="https://github.com/RootML">RootML</vendor>
+    <version>1.0.0</version>
+    <description><![CDATA[
+        <p>Adds a one-click toolbar toggle to control PyCharm's
+        <b>Show plots in tool window</b> setting
+        (Settings &gt; Tools &gt; Python Plots) without opening the settings dialog.</p>
+
+        <p>When working with matplotlib in PyCharm Professional, plots can either appear
+        inline in the console or in a dedicated tool window. Switching between these modes
+        normally requires navigating through the settings dialog. This plugin puts that
+        toggle right in your toolbar.</p>
+
+        <ul>
+            <li><b>Toggle ON:</b> Plots appear in the PyCharm Plots tool window.</li>
+            <li><b>Toggle OFF:</b> Plots appear inline in the Python console.</li>
+        </ul>
+
+        <p>The button appears in the main toolbar (right side) and the Tools menu.
+        It is only visible when the Python Scientific module is available.</p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>1.0.0</h3>
+        <ul>
+            <li>Initial release.</li>
+            <li>Toolbar toggle button for the "Show plots in tool window" setting.</li>
+            <li>Available in the main toolbar and Tools menu.</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
+
+    <!-- v2 module dependency: gives classloader access to the scientific content module -->
+    <dependencies>
+        <module name="intellij.python.scientific"/>
+    </dependencies>
+
+    <actions>
+        <action id="PlotToggle.TogglePlotsInToolWindow"
+                class="com.plottoggle.TogglePlotsAction"
+                text="Plots in Tool Window"
+                description="Toggle the 'Show plots in tool window' setting">
+            <add-to-group group-id="MainToolbarRight" anchor="last"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
